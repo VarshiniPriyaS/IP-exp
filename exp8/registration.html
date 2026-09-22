@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Profile Registration</title>
+
+    <style>
+        body {
+            background: #e8eef7;
+            font-family: Verdana, sans-serif;
+        }
+
+        .form-box {
+            width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0px 4px 12px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #243b55;
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #243b55;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #141e30;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h1>Employee Registration</h1>
+
+    <form action="profile.jsp" method="post">
+
+        <div class="field">
+            <label>Full Name</label>
+            <input type="text" name="fullName" required>
+        </div>
+
+        <div class="field">
+            <label>User Name</label>
+            <input type="text" name="userName" required>
+        </div>
+
+        <div class="field">
+            <label>Email Address</label>
+            <input type="email" name="emailAddress" required>
+        </div>
+
+        <div class="field">
+            <label>Create Password</label>
+            <input type="password" name="userPassword" required>
+        </div>
+
+        <div class="field">
+            <label>Mobile Number</label>
+            <input type="tel" name="phoneNumber" required>
+        </div>
+
+        <div class="field">
+            <label>Card Number</label>
+            <input type="text" name="creditCard" required>
+        </div>
+
+        <div class="field">
+            <label>Professional Title</label>
+            <input type="text" name="profileTitle" required>
+        </div>
+
+        <div class="field">
+            <label>Years of Experience</label>
+            <input type="number" name="experienceYears" min="0" required>
+        </div>
+
+        <button type="submit">Submit Profile</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
