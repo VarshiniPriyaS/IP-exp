@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Online Examination System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="auth-page">
+<div class="auth-box">
+<div class="logo">ONLINE EXAMINATION SYSTEM</div>
+<h2>Student Login</h2>
+<p class="subtitle">Login to continue your examination</p>
+<form id="loginForm">
+<div class="form-group">
+<label>Email Address</label>
+<input type="email" id="email" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label>Password</label>
+<input type="password" id="password" placeholder="Enter your password" required>
+</div>
+<button type="submit" class="main-btn">Login</button>
+</form>
+<p class="bottom-text">
+Don't have an account? <a href="register.html">Register here</a>
+</p>
+</div>
+</div>
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+event.preventDefault();
+const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value;
+if (email === "" || password === "") {
+alert("Please enter both email and password.");
+return;
+}
+const newUser = {
+email: email,
+password: password
+};
+localStorage.setItem("user", JSON.stringify(newUser));
+localStorage.setItem("loggedIn", "true");
+alert("Login successful.");
+window.location.href = "exam.html";
+});
+</script>
+</body>
+</html>
